@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Giva Idea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'assets/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="{% url 'home' %}">GivaIdea</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"  aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'skill_track' %}">Skill Track</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'affiliate' %}">Affiliate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="btn btn-primary mr-2">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="btn btn-outline-primary">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    {% block content %}
+
+    <main>
+       <br>
+        <section class="search-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="search-box">
+                            <form action="#" method="GET" class="search-form">
+                                <div class="input-group">
+                                    <input type="text" name="search" class="form-control" placeholder="Enter keywords">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Giva Idea</h1>
+                <p>Portal to Learning, Developing Software and Data Engineer</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias delectus labore, consequuntur, soluta totam nesciunt corrupti consequatur unde voluptatum a id aspernatur eaque enim libero fuga reiciendis, illo dolore!</p>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'assets/image1.jpg' %}" class="card-img-top" alt="Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to represent the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'assets/image2.jpg' %}" class="card-img-top" alt="Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to represent the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'assets/image3.jpg' %}" class="card-img-top" alt="Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Card Title</h5>
+                                <p class="card-text">Some example text to represent the card's content.</p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% endblock %}
+       
+    </main>
+
+    <br><br>
+    
+    <footer >
+        <section class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="text-primary">&copy; 2023 Giva Idea. All rights reserved.</p>
+              </div>
+              <div class="col-md-6">
+                <ul class="social-media">
+                    <li><a class="text-primary" href="#"><i class="fab fa-facebook-f text-primary"></i> Giva Idea</a></li>
+                    <li><a class="text-primary" href="#"><i class="fab fa-twitter text-primary"></i> #GivaIdea</a></li>
+                    <li><a class="text-primary" href="#"><i class="fab fa-instagram text-primary"></i> @givaidea</a></li>
+                    <li><a class="text-primary" href="#"><i class="fab fa-github text-primary"></i> alimahatma@github</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </footer>
+  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-..." crossorigin="anonymous"></script>
+</body>
+</html>
+  
+                 
