@@ -5,7 +5,7 @@
     <title>Welcome to Giva Idea</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'assets/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 </head>
 <body>
@@ -31,7 +31,7 @@
                         <a href="{% url 'register' %}" class="btn btn-primary mr-2">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="btn btn-outline-primary">Login</a>
+                        <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
                     </li>
                 </ul>
             </div>
@@ -117,7 +117,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <p class="text-primary">&copy; 2023 Giva Idea. All rights reserved.</p>
+                <p class="text-primary">&copy; {% now "Y" %} Giva Idea. Copyrights reserved by <a href="#">cak ali</a></p></>
               </div>
               <div class="col-md-6">
                 <ul class="social-media">

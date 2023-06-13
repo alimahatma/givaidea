@@ -1,0 +1,6 @@
+<h1>Admin Dashboard</h1>
+{% if user.is_admin %}
+    <p>Welcome, Admin!</p>
+{% else %}
+    <p>Access denied. You are not an admin.</p>
+{% endif %}

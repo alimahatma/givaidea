@@ -7,6 +7,14 @@
     <title>Superadmin</title>
 </head>
 <body>
+
+    <div>
+        {% if request.user.role == 'admin' or request.user.role == 'superadmin' %}
+            <a href="{% url 'admin' %}">Admin Panel</a>
+        {% else %}
+            <a href="{% url 'home' %}">Home</a>
+        {% endif %}
+    </div>
     
 </body>
 </html>

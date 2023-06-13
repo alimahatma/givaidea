@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Register</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap.min.css'%}">
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
 </head>
-<body>
+<!-- <body> -->
 
     <form class="register-form" method="POST">
         <h3>Register Here</h3>
@@ -23,8 +23,16 @@
             </div>
         {% endfor %}
         <button type="submit" class="btn btn-primary">Register</button>
-        <p class="login">Have an account? <a href="#">Login!</a></p>
+        <p class="login">Have an account? <a href="{% url 'login' %}">Login!</a></p>
+        
+        {% if messages %}
+            <ul class="molestias">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %} >{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </form>
-    
-</body>
+
+<!-- </body> -->
 </html>
