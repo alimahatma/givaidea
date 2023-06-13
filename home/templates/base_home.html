@@ -64,9 +64,12 @@
         
         <section class="hero">
             <div class="container">
-                <h1>Welcome to Giva Idea</h1>
-                <p>Portal to Learning, Developing Software and Data Engineer</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem molestias delectus labore, consequuntur, soluta totam nesciunt corrupti consequatur unde voluptatum a id aspernatur eaque enim libero fuga reiciendis, illo dolore!</p>
+                {% for hero in heroes %}
+                    <h1>{{ hero.title }}</h1>
+                    <p>{{ hero.description }}</p>
+                {% empty %}
+                    <li>No heroes available.</li>
+                {% endfor %}
             </div>
         </section>
         <section class="content">

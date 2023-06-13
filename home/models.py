@@ -37,4 +37,8 @@ class Article(models.Model):
     published_date = models.DateTimeField(auto_created=True)
     category = models.ManyToManyField(Category)
     author = models.ForeignKey(Person, on_delete=models.CASCADE)
+    
+class Hero(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField()
 

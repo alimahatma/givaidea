@@ -3,9 +3,12 @@ from .forms import RegisterForm
 from .forms import LoginForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
+from .models import Hero
+
 
 def home(request):
-    return render(request, 'home/home.html')
+    heroes = Hero.objects.all()
+    return render(request, 'home/home.html', {'heroes':heroes})
 
 
 def skill_track(request):
@@ -49,6 +52,8 @@ def login_view(request):
         'form': form
     }
     return render(request, 'home/login.html', context)
+
+
 
 
 
